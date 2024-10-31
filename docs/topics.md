@@ -1,0 +1,122 @@
+
+- Setup | Install : Python3, `pyenv`
+    - Getting Started: installing, running, IDLE/iPython, editors, IDEs
+        - Editors: VSCode, Pycharm, Atom, Vim, Emacs, plugins
+        - Shells: IDLE, iPython
+        - Virual Environments: `python3 -m venv .venv --prompt=your-env-name`
+            - `source .venv/bin/activate`
+            - `deactivate`
+    -  Basic syntax, operations and control flow looping
+        - Basic types: `int`, `float`, `complex`, `string`, `bool`, `None`
+        - Operations:  `+`, `-`, `*`, `/`, `//`, `%`, `**`
+            - remember precedence, use `()` to disambiguate
+        - Variables: names/labels for values 
+            - a variable knows its type: **all variables are objects**
+            - a variable can be dynamically changed to point to or label a new type
+        - with ...
+    - Control flow
+        - `bool` type [`True` | `False`]
+        - comparison operators: >, <, >=, <=, ==, != 
+        - `and`, `or`, `not` keywords
+        - Conditionals require a boolean expression
+        - `if (...)` , `elif`, `else`
+        - `with (...)` 
+        - `for` loops 
+            - `range()` function\
+        - Conditional expressions (ternary expression)
+            - `my_var = 1 if condition else 2`
+            - `print("A") if condition else print("B")`
+    - Lists, Tuples, Dicts, Sets
+        - indexing, slicing, appending, mutability v immutability
+    - Strings and Bytes
+        - strings are character arrays
+        - you can use single quotes, double quotes or triple quotes (for multiline stings)
+        - convert strings to numbers with type casting `int('100')`
+        - Working with bytes
+            - `bstr = b"a byte string"`
+            - `cstr = bytes(10)`: an empty byte string, 10 bytes long
+            - retrieving a single index of a bytes string returns an integer
+            - retrieving a slice of a byte string returns another bytes string
+            - a `byte array` is mutable a `bytes` object is immutable
+                - `ba = bytearray(10)`
+                - `myfile.readinto(ba)  # reads 10 bytes from a file`
+                - `bytearray(myfile.read(5))  # reads 5 bytes into a new byte array object`
+    - Functions
+        - callilng, lambda syntax
+        - parameters - declaration
+            - default values
+        - calling functions - parameter position or keyword
+            - formal parameters are references to the actual parameters
+        - return values
+            - what is ret urned if you don't return anything
+        - Scoping rules
+            - function has its own scope which can access things in its enclosing scope but not a descendant scope
+            - local variables will hide global variables with the same name
+    - Streams and Files
+        - Standard Streams - these all work like files
+            - `sys.stdout` : write only
+            - `sys.stderr` : write only
+            - `sys.stdin`  : read only
+        - `errno` package
+            - `errno` is th e number of th e last error
+                - `errorcode`: a dict which maps error code number to a string
+            - `os.strerror(errno_value)`  Utility function
+        - Files
+            - `fp = open(filename, mode)  # mode = r for read (default) or w for write`
+                - `+` in mode you can read or write, `b` indicates bytes, `a` indicates append
+            - `fp.wirte("This is the time\n")    # you need to include a newline explicitly in write`
+            - `fp.close()` : always make sure to close the file
+            - `fp.seek(0)`: rewind to the beginning of the file
+    - Functional Programming
+        - Lambdas
+        - Built In Higher Order Functions
+            - HOF - takes a function as an parameter to another function
+            - `map(func, collection)`: maps each value of `collection` to a new value using `func`
+            - `filter(predicate, collection)` : returns a subset of `collection`, value is in output only if `predicate` evaluates to `True` for the collection member
+            - `reduce(function, collection)`:  reduces `collection` to a single result using `function`
+    - Classes and OO Programming
+        - __init__(), methods, public/private, inheritance, dunder methods
+    -  Exception Handling
+    -  Modules and Packages
+        - Importing
+        - ```python
+import os
+import os, sys
+import numpy as np
+from pprint import pprint```
+    - Doing Time: working with datetimes in Python
+        - time and datetime, pytz (external)
+        - arrow, delorean1
+    - Standard library
+        - json, csv, argparse, gzip, os, sys, time, datetime, random,
+    - Third Party Libraries
+        - pip, PyPi
+        - requests, boto3, beautiful soup, sqlalchemy, TensorFlow
+        - Math/Arrays: numpy, scipy, pandas, ipython
+        - ML: scikit-learn, theano, TensorFlow,
+        - plotting: matplotlib, bokeh, seaborn
+        - Image Processing: Pillow, Mahotas
+        - Utilities/CLI: tqdm, progress, click
+        - Pydantic, sqlalchemy
+    - Depencency Management and Packaging
+        - venv, pipenv, poetry
+    - Python Data/Object Model
+    - Packaging/deploying
+        - flit, setuptools, pyproject.toml.
+    - Decorators and Generators
+    - Testing
+        - pytest, nose, unittest, doctest, plugins, coverate, tox, mocking
+    - Web Programming
+        - flask, django, pyramid, bottle, web2py, fastapi, cherrypy
+    - Configuration files
+        - INI, TOML (pyproject.toml), tox.ini, conf.py, pytest.ini, configfileparser
+        - PEP 518 toml
+    - Continuous Integration
+        - pre-commit, github actions, gitlab CI (pipelines) `.gitlab-ci.yml`, travis CI, circle CI
+    - Code analysis
+        - code style: black, flake8
+        - cod conventions:  pylint
+        - security: bandit
+        - coverage: 
+    - Documentation
+        - Sphinx, mkdocs, Swagger, myst, doctest, redoc, fastAPI
