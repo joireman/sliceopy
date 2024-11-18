@@ -46,4 +46,7 @@ if __name__ == '__main__':
     assert (pt.weight('Na')+pt.weight('Cl')) == 58.443
 
     #= assert (calculate_fw('K2SO4') == )
-    print(f"K2SO4 = {2*pt.weight('K') + pt.weight('S')+ 4*pt.weight('O')}")
+    #print(f"K2SO4 = {2*pt.weight('K') + pt.weight('S')+ 4*pt.weight('O')}")
+
+    greeting("Heidi")
+    greeting(1.2345)
